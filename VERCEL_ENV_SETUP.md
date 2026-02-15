@@ -5,21 +5,27 @@
 ## المتغيرات المطلوبة:
 
 ### 1. NEXT_PUBLIC_SUPABASE_URL
+
 ```
 https://your-project.supabase.co
 ```
+
 احصل عليه من: Supabase Dashboard → Project Settings → API → Project URL
 
 ### 2. NEXT_PUBLIC_SUPABASE_ANON_KEY
+
 ```
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
+
 احصل عليه من: Supabase Dashboard → Project Settings → API → Project API keys → anon public
 
 ### 3. SUPABASE_SERVICE_ROLE_KEY (اختياري - للعمليات الإدارية)
+
 ```
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
+
 احصل عليه من: Supabase Dashboard → Project Settings → API → Project API keys → service_role secret
 
 ---

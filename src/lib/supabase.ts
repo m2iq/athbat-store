@@ -7,7 +7,7 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
 if (!supabaseUrl) {
   console.error(
     "❌ Missing NEXT_PUBLIC_SUPABASE_URL\n" +
-    "   Add it to Vercel Environment Variables or admin/.env.local"
+      "   Add it to Vercel Environment Variables or admin/.env.local",
   );
 }
 
@@ -16,7 +16,7 @@ const key = supabaseServiceKey || supabaseAnonKey;
 if (!key) {
   console.error(
     "❌ Missing SUPABASE_SERVICE_ROLE_KEY and NEXT_PUBLIC_SUPABASE_ANON_KEY\n" +
-    "   Add at least one to Vercel Environment Variables or admin/.env.local"
+      "   Add at least one to Vercel Environment Variables or admin/.env.local",
   );
 }
 
@@ -30,5 +30,5 @@ if (!supabaseServiceKey) {
 
 export const supabase = createClient(
   supabaseUrl || "https://placeholder.supabase.co",
-  key || "placeholder-key"
+  key || "placeholder-key",
 );
