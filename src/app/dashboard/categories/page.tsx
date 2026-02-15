@@ -7,9 +7,7 @@ import CategoriesTable from "./categories-table";
 
 interface Category {
   id: string;
-  name_en: string;
   name_ar: string;
-  description_en: string | null;
   description_ar: string | null;
   icon: string;
   sort_order: number;
