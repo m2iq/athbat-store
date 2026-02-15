@@ -8,14 +8,17 @@ export async function GET(req: NextRequest) {
     const { searchParams } = req.nextUrl;
     const page = Math.max(1, parseInt(searchParams.get("page") || "1"));
     const limit = Math.min(
-      100,
-      Math.max(1, parseInt(searchParams.get("limit") || "50")),
+      50,
+      Math.max(1, parseInt(searchParams.get("limit") || "20")),
     );
     const status = searchParams.get("status") || undefined;
 
     let query = supabase
       .from("orders")
-      .select("*, profiles(full_name, phone)", { count: "exact" })
+      .select(
+        "id, user_id, product_name, product_price, quantity, total_amount, status, admin_reply, created_at, profiles(full_name, phone)",
+        { count: "exact" },
+      )
       .order("created_at", { ascending: false })
       .range((page - 1) * limit, page * limit - 1);
 

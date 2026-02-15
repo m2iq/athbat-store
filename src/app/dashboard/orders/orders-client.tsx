@@ -68,7 +68,7 @@ export default function OrdersClient() {
   const loadOrders = useCallback(async () => {
     setLoading(true);
     try {
-      const params = new URLSearchParams({ page: "1", limit: "100" });
+      const params = new URLSearchParams({ page: "1", limit: "20" });
       if (statusFilter !== "all") params.set("status", statusFilter);
       const res = await fetch(`/api/orders?${params}`);
 
@@ -90,10 +90,10 @@ export default function OrdersClient() {
 
   useEffect(() => {
     loadOrders();
-    // Auto-refresh every 15 seconds
+    // Auto-refresh every 30 seconds
     refreshInterval.current = setInterval(() => {
       loadOrders();
-    }, 15000);
+    }, 30000);
     return () => {
       if (refreshInterval.current) clearInterval(refreshInterval.current);
     };
@@ -212,7 +212,7 @@ export default function OrdersClient() {
           <button
             key={s}
             onClick={() => setStatusFilter(s)}
-            className={`px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors min-h-[40px] ${
+            className={`px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors min-h-10 ${
               statusFilter === s
                 ? "bg-blue-600 text-white"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -431,7 +431,7 @@ export default function OrdersClient() {
                           </span>
                           {order.admin_reply && (
                             <p
-                              className="text-[10px] text-blue-600 mt-1 truncate max-w-[120px]"
+                              className="text-[10px] text-blue-600 mt-1 truncate max-w-30"
                               title={order.admin_reply}
                             >
                               رد: {order.admin_reply}
@@ -489,7 +489,7 @@ export default function OrdersClient() {
 
       {/* Reply Modal */}
       {replyOrder && (
-        <div className="fixed inset-0 z-[80] flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-80 flex items-center justify-center p-4">
           <div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => {
@@ -563,7 +563,7 @@ export default function OrdersClient() {
               <button
                 onClick={handleSendReply}
                 disabled={sendingReply || !replyText.trim()}
-                className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 text-white rounded-xl text-sm font-bold hover:bg-blue-700 disabled:opacity-50 transition-colors min-h-[44px]"
+                className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 text-white rounded-xl text-sm font-bold hover:bg-blue-700 disabled:opacity-50 transition-colors min-h-11"
               >
                 {sendingReply ? (
                   <Loader2 size={16} className="animate-spin" />
@@ -578,7 +578,7 @@ export default function OrdersClient() {
                   setReplyOrder(null);
                   setReplyText("");
                 }}
-                className="px-4 py-2.5 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-xl transition-colors min-h-[44px]"
+                className="px-4 py-2.5 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-xl transition-colors min-h-11"
               >
                 إلغاء
               </button>
@@ -589,7 +589,7 @@ export default function OrdersClient() {
 
       {/* Delete Confirm Modal */}
       {deleteOrder && (
-        <div className="fixed inset-0 z-[80] flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-80 flex items-center justify-center p-4">
           <div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setDeleteOrder(null)}

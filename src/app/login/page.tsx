@@ -29,12 +29,12 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-blue-50 via-white to-purple-50 p-4">
       <div className="w-full max-w-md">
         <div className="bg-white rounded-3xl shadow-2xl shadow-blue-600/10 p-8 sm:p-10">
           {/* Logo & Title */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-linear-to-br from-blue-600 to-purple-600 rounded-2xl mb-4">
               <Lock size={32} className="text-white" />
             </div>
             <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
@@ -100,7 +100,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3.5 text-base font-bold text-white bg-gradient-to-l from-blue-600 to-blue-700 rounded-xl hover:shadow-lg hover:shadow-blue-600/30 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+              className="w-full py-3.5 text-base font-bold text-white bg-linear-to-l from-blue-600 to-blue-700 rounded-xl hover:shadow-lg hover:shadow-blue-600/30 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
             >
               {loading ? "جارٍ تسجيل الدخول..." : "تسجيل الدخول"}
             </button>

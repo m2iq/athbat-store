@@ -212,7 +212,7 @@ export default function RechargeCodesClient() {
           <button
             key={s}
             onClick={() => setStatusFilter(s)}
-            className={`px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors min-h-[40px] ${
+            className={`px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors min-h-10 ${
               statusFilter === s
                 ? "bg-blue-600 text-white"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"

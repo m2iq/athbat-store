@@ -115,7 +115,7 @@ export default function ProductsTable({
         {/* Toolbar */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
           <div className="flex items-center gap-2 sm:gap-3 flex-1 flex-wrap">
-            <div className="relative flex-1 min-w-[140px] max-w-xs">
+            <div className="relative flex-1 min-w-35 max-w-xs">
               <Search
                 size={16}
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
@@ -124,13 +124,13 @@ export default function ProductsTable({
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="بحث..."
-                className="w-full pr-9 pl-3 py-2 text-sm border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none min-h-[40px]"
+                className="w-full pr-9 pl-3 py-2 text-sm border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none min-h-10"
               />
             </div>
             <select
               value={filterCat}
               onChange={(e) => setFilterCat(e.target.value)}
-              className="px-3 py-2 text-sm border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none min-h-[40px]"
+              className="px-3 py-2 text-sm border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none min-h-10"
             >
               <option value="all">جميع الفئات</option>
               {categories.map((c) => (
@@ -146,7 +146,7 @@ export default function ProductsTable({
               setEditing(null);
               setShowForm(true);
             }}
-            className="flex items-center justify-center gap-2 px-4 py-2 text-sm font-bold text-white bg-linear-to-l from-blue-600 to-blue-700 rounded-xl hover:shadow-lg hover:shadow-blue-600/25 transition-all duration-200 min-h-[44px]"
+            className="flex items-center justify-center gap-2 px-4 py-2 text-sm font-bold text-white bg-linear-to-l from-blue-600 to-blue-700 rounded-xl hover:shadow-lg hover:shadow-blue-600/25 transition-all duration-200 min-h-11"
           >
             <Plus size={16} />
             إضافة منتج
@@ -245,7 +245,7 @@ export default function ProductsTable({
                       setEditing(product);
                       setShowForm(true);
                     }}
-                    className="flex-1 flex items-center justify-center gap-1 py-2 px-2 text-xs font-medium text-blue-700 hover:text-blue-800 hover:bg-blue-50 rounded-lg transition-colors min-h-[36px]"
+                    className="flex-1 flex items-center justify-center gap-1 py-2 px-2 text-xs font-medium text-blue-700 hover:text-blue-800 hover:bg-blue-50 rounded-lg transition-colors min-h-9"
                   >
                     <Pencil size={14} />
                     <span className="hidden sm:inline">تعديل</span>
@@ -253,7 +253,7 @@ export default function ProductsTable({
                   <button
                     onClick={() => handleDelete(product.id)}
                     disabled={deleting === product.id}
-                    className="flex-1 flex items-center justify-center gap-1 py-2 px-2 text-xs font-medium text-red-600 hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors disabled:opacity-50 min-h-[36px]"
+                    className="flex-1 flex items-center justify-center gap-1 py-2 px-2 text-xs font-medium text-red-600 hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors disabled:opacity-50 min-h-9"
                   >
                     {deleting === product.id ? (
                       <Loader2 size={14} className="animate-spin" />

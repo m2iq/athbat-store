@@ -3,54 +3,54 @@
 import { useConfirm } from "@/components/confirm-modal";
 import { useToast } from "@/components/toast";
 import {
-    Apple,
-    Award,
-    Book,
-    Box,
-    Briefcase,
-    Building,
-    Camera,
-    Chrome,
-    Cloud,
-    CreditCard,
-    Flame,
-    FolderTree,
-    Gamepad2,
-    Gift,
-    Globe,
-    Headphones,
-    Heart,
-    Home,
-    Laptop,
-    Loader2,
-    MessageCircle,
-    MessageSquare,
-    Monitor,
-    Moon,
-    Music,
-    Package,
-    Pencil,
-    Phone,
-    Play,
-    Plus,
-    Settings,
-    Shield,
-    ShoppingBag,
-    ShoppingCart,
-    Smartphone,
-    Star,
-    Store,
-    Sun,
-    Tablet,
-    Tag,
-    Trash2,
-    Tv,
-    User,
-    Users,
-    Video,
-    Wifi,
-    Zap,
-    type LucideIcon,
+  Apple,
+  Award,
+  Book,
+  Box,
+  Briefcase,
+  Building,
+  Camera,
+  Chrome,
+  Cloud,
+  CreditCard,
+  Flame,
+  FolderTree,
+  Gamepad2,
+  Gift,
+  Globe,
+  Headphones,
+  Heart,
+  Home,
+  Laptop,
+  Loader2,
+  MessageCircle,
+  MessageSquare,
+  Monitor,
+  Moon,
+  Music,
+  Package,
+  Pencil,
+  Phone,
+  Play,
+  Plus,
+  Settings,
+  Shield,
+  ShoppingBag,
+  ShoppingCart,
+  Smartphone,
+  Star,
+  Store,
+  Sun,
+  Tablet,
+  Tag,
+  Trash2,
+  Tv,
+  User,
+  Users,
+  Video,
+  Wifi,
+  Zap,
+  type LucideIcon,
 } from "lucide-react";
 import { useState } from "react";
 import CategoryForm from "./category-form";
@@ -185,7 +185,7 @@ export default function CategoriesTable({
             setEditing(null);
             setShowForm(true);
           }}
-          className="flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 bg-linear-to-l from-blue-600 to-blue-700 text-white rounded-xl text-sm font-bold hover:shadow-lg hover:shadow-blue-600/25 transition-all duration-200 min-h-[44px]"
+          className="flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 bg-linear-to-l from-blue-600 to-blue-700 text-white rounded-xl text-sm font-bold hover:shadow-lg hover:shadow-blue-600/25 transition-all duration-200 min-h-11"
         >
           <Plus size={18} />
           إضافة فئة
@@ -266,14 +266,14 @@ export default function CategoriesTable({
                         setEditing(cat);
                         setShowForm(true);
                       }}
-                      className="p-2 rounded-lg hover:bg-blue-50 text-gray-400 hover:text-blue-700 transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center"
+                      className="p-2 rounded-lg hover:bg-blue-50 text-gray-400 hover:text-blue-700 transition-colors min-w-9 min-h-9 flex items-center justify-center"
                     >
                       <Pencil size={16} />
                     </button>
                     <button
                       onClick={() => handleDelete(cat.id)}
                       disabled={deleting === cat.id}
-                      className="p-2 rounded-lg hover:bg-red-50 text-gray-400 hover:text-red-500 transition-colors disabled:opacity-50 min-w-[36px] min-h-[36px] flex items-center justify-center"
+                      className="p-2 rounded-lg hover:bg-red-50 text-gray-400 hover:text-red-500 transition-colors disabled:opacity-50 min-w-9 min-h-9 flex items-center justify-center"
                     >
                       {deleting === cat.id ? (
                         <Loader2 size={16} className="animate-spin" />

@@ -7,7 +7,7 @@ import {
   FolderTree,
   Package,
   ShoppingBag,
-  Users
+  Users,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -66,23 +66,26 @@ export default function DashboardPage() {
   useEffect(() => {
     async function load() {
       try {
-        const [catRes, prodRes, orderRes, codeRes] = await Promise.all([
-          fetch("/api/categories"),
-          fetch("/api/products?limit=1"),
-          fetch("/api/orders?limit=1"),
-          fetch("/api/recharge-codes?limit=1"),
-        ]);
+        const [catRes, prodRes, orderRes, codeRes, usersRes] =
+          await Promise.all([
+            fetch("/api/categories"),
+            fetch("/api/products?limit=1"),
+            fetch("/api/orders?limit=1"),
+            fetch("/api/recharge-codes?limit=1"),
+            fetch("/api/users/count"),
+          ]);
 
         const cats = catRes.ok ? await catRes.json() : [];
         const prods = prodRes.ok ? await prodRes.json() : { total: 0 };
         const orders = orderRes.ok ? await orderRes.json() : { total: 0 };
         const codes = codeRes.ok ? await codeRes.json() : { total: 0 };
+        const usersData = usersRes.ok ? await usersRes.json() : { count: 0 };
 
         setStats({
           categories: Array.isArray(cats) ? cats.length : 0,
           products: prods.total ?? 0,
           orders: orders.total ?? 0,
-          users: 0,
+          users: usersData.count ?? 0,
           rechargeCodes: codes.total ?? 0,
         });
       } catch {

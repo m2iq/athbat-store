@@ -31,7 +31,10 @@ export async function GET(req: NextRequest) {
 
     let query = supabase
       .from("recharge_codes")
-      .select("*", { count: "exact" })
+      .select(
+        "id, code_hash, amount, is_used, used_by, used_at, batch_id, expires_at, created_at",
+        { count: "exact" },
+      )
       .order("created_at", { ascending: false })
       .range((page - 1) * limit, page * limit - 1);
 

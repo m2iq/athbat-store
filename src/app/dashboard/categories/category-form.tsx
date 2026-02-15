@@ -181,7 +181,7 @@ export default function CategoryForm({ category, onSave, onCancel }: Props) {
           <button
             type="button"
             onClick={() => setShowIconPicker(!showIconPicker)}
-            className="flex items-center gap-3 px-4 py-3 border-2 border-dashed border-gray-200 rounded-xl hover:border-blue-400 transition-colors w-full sm:w-auto min-h-[44px]"
+            className="flex items-center gap-3 px-4 py-3 border-2 border-dashed border-gray-200 rounded-xl hover:border-blue-400 transition-colors w-full sm:w-auto min-h-11"
           >
             <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
               <SelectedIconComponent size={22} className="text-blue-700" />
@@ -203,7 +203,7 @@ export default function CategoryForm({ category, onSave, onCancel }: Props) {
                       setForm({ ...form, icon: name });
                       setShowIconPicker(false);
                     }}
-                    className={`flex flex-col items-center gap-1 p-2 rounded-lg transition-all duration-150 min-h-[44px] ${
+                    className={`flex flex-col items-center gap-1 p-2 rounded-lg transition-all duration-150 min-h-11 ${
                       form.icon === name
                         ? "bg-blue-600 text-white shadow-md"
                         : "hover:bg-white hover:shadow-sm text-gray-600"
@@ -230,7 +230,7 @@ export default function CategoryForm({ category, onSave, onCancel }: Props) {
             value={form.name_ar}
             onChange={(e) => setForm({ ...form, name_ar: e.target.value })}
             dir="rtl"
-            className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none transition-all min-h-[44px]"
+            className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none transition-all min-h-11"
             placeholder="مثال: شحن الهاتف"
             required
           />
@@ -264,10 +264,10 @@ export default function CategoryForm({ category, onSave, onCancel }: Props) {
               onChange={(e) =>
                 setForm({ ...form, sort_order: Number(e.target.value) })
               }
-              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none transition-all min-h-[44px]"
+              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none transition-all min-h-11"
             />
           </div>
-          <label className="flex items-center gap-2 text-sm font-medium cursor-pointer pb-1 min-h-[44px]">
+          <label className="flex items-center gap-2 text-sm font-medium cursor-pointer pb-1 min-h-11">
             <input
               type="checkbox"
               checked={form.is_active}
@@ -285,14 +285,14 @@ export default function CategoryForm({ category, onSave, onCancel }: Props) {
           <button
             type="submit"
             disabled={loading}
-            className="px-8 py-2.5 text-sm font-bold text-white bg-linear-to-l from-blue-600 to-blue-700 rounded-xl hover:shadow-lg hover:shadow-blue-600/25 disabled:opacity-50 transition-all duration-200 min-h-[44px]"
+            className="px-8 py-2.5 text-sm font-bold text-white bg-linear-to-l from-blue-600 to-blue-700 rounded-xl hover:shadow-lg hover:shadow-blue-600/25 disabled:opacity-50 transition-all duration-200 min-h-11"
           >
             {loading ? "جارٍ الحفظ..." : "حفظ"}
           </button>
           <button
             type="button"
             onClick={onCancel}
-            className="px-6 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-100 rounded-xl transition-colors min-h-[44px]"
+            className="px-6 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-100 rounded-xl transition-colors min-h-11"
           >
             إلغاء
           </button>

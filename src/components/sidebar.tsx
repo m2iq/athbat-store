@@ -6,6 +6,7 @@ import {
   LayoutDashboard,
   Package,
   ShoppingBag,
+  Users,
   X,
 } from "lucide-react";
 import Link from "next/link";
@@ -22,6 +23,7 @@ const LINKS = [
     icon: CreditCard,
   },
   { href: "/dashboard/orders", label: "الطلبات", icon: ShoppingBag },
+  { href: "/dashboard/users", label: "المستخدمون", icon: Users },
 ];
 
 // Sidebar context to allow Header to toggle the mobile sidebar

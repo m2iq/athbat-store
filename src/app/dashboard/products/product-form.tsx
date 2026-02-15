@@ -197,7 +197,7 @@ export default function ProductForm({
             value={form.name_ar}
             onChange={(e) => setForm({ ...form, name_ar: e.target.value })}
             dir="rtl"
-            className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none transition-all min-h-[44px]"
+            className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none transition-all min-h-11"
             placeholder="مثال: رصيد زين 5000"
             required
           />
@@ -230,7 +230,7 @@ export default function ProductForm({
           <select
             value={form.category_id}
             onChange={(e) => setForm({ ...form, category_id: e.target.value })}
-            className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none transition-all min-h-[44px]"
+            className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none transition-all min-h-11"
             required
           >
             <option value="">اختر الفئة</option>
@@ -254,7 +254,7 @@ export default function ProductForm({
               onChange={(e) =>
                 setForm({ ...form, price: Number(e.target.value) })
               }
-              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none transition-all min-h-[44px]"
+              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none transition-all min-h-11"
               required
             />
           </div>
@@ -265,7 +265,7 @@ export default function ProductForm({
             <select
               value={form.currency}
               onChange={(e) => setForm({ ...form, currency: e.target.value })}
-              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none transition-all min-h-[44px]"
+              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-blue-600/20 focus:border-blue-500 outline-none transition-all min-h-11"
             >
               <option value="IQD">دينار عراقي (IQD)</option>
               <option value="USD">دولار (USD)</option>
@@ -275,7 +275,7 @@ export default function ProductForm({
 
         {/* Active toggle */}
         <div className="flex items-center gap-4">
-          <label className="flex items-center gap-2 text-sm font-medium cursor-pointer min-h-[44px]">
+          <label className="flex items-center gap-2 text-sm font-medium cursor-pointer min-h-11">
             <input
               type="checkbox"
               checked={form.is_active}
@@ -293,14 +293,14 @@ export default function ProductForm({
           <button
             type="submit"
             disabled={loading}
-            className="px-8 py-2.5 text-sm font-bold text-white bg-linear-to-l from-blue-600 to-blue-700 rounded-xl hover:shadow-lg hover:shadow-blue-600/25 disabled:opacity-50 transition-all duration-200 min-h-[44px]"
+            className="px-8 py-2.5 text-sm font-bold text-white bg-linear-to-l from-blue-600 to-blue-700 rounded-xl hover:shadow-lg hover:shadow-blue-600/25 disabled:opacity-50 transition-all duration-200 min-h-11"
           >
             {loading ? "جارٍ الحفظ..." : "حفظ"}
           </button>
           <button
             type="button"
             onClick={onCancel}
-            className="px-6 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-100 rounded-xl transition-colors min-h-[44px]"
+            className="px-6 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-100 rounded-xl transition-colors min-h-11"
           >
             إلغاء
           </button>
