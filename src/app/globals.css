@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-blue-50: #eef4ff;
+  --color-blue-100: #dae6ff;
+  --color-blue-200: #bdd3ff;
+  --color-blue-300: #90b8ff;
+  --color-blue-400: #5c92ff;
+  --color-blue-500: #3b74f6;
+  --color-blue-600: #1d4ed8;
+  --color-blue-700: #1a3fba;
+  --color-blue-800: #1a3494;
+  --color-blue-900: #1b2d6e;
+
+  --color-teal-50: #effefa;
+  --color-teal-100: #c7fff1;
+  --color-teal-200: #90ffe4;
+  --color-teal-300: #50f0d0;
+  --color-teal-400: #1cd9b8;
+  --color-teal-500: #06b6a0;
+  --color-teal-600: #019583;
+  --color-teal-700: #067769;
+  --color-teal-800: #0a5e55;
+  --color-teal-900: #0d4e47;
+
+  --color-navy-600: #162033;
+  --color-navy-700: #0f172a;
+  --color-navy-800: #0b1120;
+  --color-navy-900: #060a14;
+
+  --color-accent-500: #019583;
+  --color-accent-600: #067769;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+
+  --animate-slide-in: slide-in 0.3s ease-out;
+  --animate-fade-in: fade-in 0.2s ease-out;
+
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(-8px) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+* {
+  font-family:
+    "Tajawal",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.transition-sidebar {
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
